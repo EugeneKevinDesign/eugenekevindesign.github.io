@@ -1,0 +1,513 @@
+@font-face {
+    font-family: "Myriad";
+    font-style: thin;
+    src: url('../../myriad/myriad-set-pro_thin.ttf');
+}
+
+@font-face {
+    font-family: "Myriad SemiBold";
+    font-style: semibold;
+    src: url('../../myriad/myriad-set-pro_semibold.ttf');
+}
+
+@font-face {
+    font-family: "Myriad Text";
+    font-style: thin;
+    src: url('../../myriad/myriad-set-pro_text.ttf');
+}
+
+body{
+    margin: 0;
+    font-family: "Myriad";
+    color: #3F3F3F;
+    width: 100%;
+}
+
+.pages{
+    padding-top: 8px;
+    height: 40px;
+    font-size: 17px;
+    background-color: #2D3E5C;
+}
+
+.chapters{
+    padding: 8px 0px 8px;
+    height: auto;
+    font-size: 13px;
+    z-index: 150;
+    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, .2);
+    background-color: white;
+    margin-bottom: -34.5667px;
+    font-family: "Myriad Text";
+}
+
+nav ul{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    -webkit-transition: max-height 0.4s ease-in-out;
+    -ms-transition: max-height 0.4s ease-in-out;
+    -moz-transition: max-height 0.4s ease-in-out;
+    -o-transition: max-height 0.4s ease-in-out;
+    transition: max-height 0.4s ease-in-out;
+}
+
+a{
+    text-decoration: none;
+    color: #7184A6;
+    margin-left: 15px;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #A2BCEA;
+}
+
+a:focus{
+    text-decoration: none;
+    outline: none;
+    color: #7184A6;
+}
+
+.current-page, .current-page:hover, .current-page:focus{
+    color: #FFFFFF;
+}
+
+.chapters-scrolled{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.current, .current:hover, .chapters a:focus{
+    color: #2D3E5C;
+}
+
+.handle{
+    display: none;
+    cursor: pointer;
+    width: 23px;
+    margin: auto;
+    opacity: 1;
+    -webkit-transition: transform 0.4s ease-in-out;
+    -ms-transition: transform 0.4s ease-in-out;
+    -moz-transition: transform 0.4s ease-in-out;
+    -o-transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+}
+
+.handle img{
+    width: 100%;
+}
+
+@media screen and (max-width: 800px){
+    .handle{
+        display: block;
+    }
+
+    .dropped-down{
+        transform:rotate(180deg);
+    }
+
+    nav ul{
+        max-height: 0;
+    }
+
+    .showing{
+        max-height: 35em;
+    }
+
+    .chapters a{
+        width: 85%;
+        display: block;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin: auto;
+        font-size: 17px;
+        border-bottom: solid 1px #E8E8E8;
+    }
+
+    .chapters a:last-child{
+        border:none;
+    }
+}
+
+.presentation{
+    color: white;
+    width: 100%;
+    height: auto;
+    padding-bottom: 100px;
+    padding-top: 134.5667px;
+    background: -webkit-linear-gradient(#FB8690, #F8E094);
+    background: -o-linear-gradient(#FB8690, #F8E094);
+    background: -moz-linear-gradient(#FB8690, #F8E094);
+    background: linear-gradient(#FB8690, #F8E094);
+}
+
+.coming{
+    width: 164px;
+    height: 35px;
+    margin: auto;
+    margin-top: 45px;
+    border: solid 1px white;
+    border-radius: 5px;
+}
+
+.coming p{
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-size: 16px;
+    padding-top: 6px;
+    font-family: "Myriad Text";
+}
+
+.headline{
+    font-size: 80px;
+    letter-spacing: -0.024em;
+    line-height: 1.15;
+    text-align: center;
+}
+
+.subhead{
+    font-size: 44px;
+    letter-spacing: -0.01em;
+    line-height: 1.09091;
+    margin-bottom: 0.62em;
+    margin-top: 0;
+    text-align: center;
+}
+
+.text{
+    margin: auto;
+    margin-bottom: 2.05em;
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 1.33349;
+    width: 980px;
+    text-align: center;
+}
+
+.eyebrow{
+    margin-bottom: 18px;
+    margin-top: 8px;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: 1.125;
+    text-align: center;
+    display: block;
+}
+
+.overview-headline{
+    margin: auto;
+    font-size: 60px;
+    letter-spacing: -0.014em;
+    line-height: 1.0625;
+    text-align: center;
+    margin-bottom: 30px;
+    width: 70%;
+}
+
+.subtitle{
+    width: 100%;
+    margin: 0;
+    font-size: 35px;
+    letter-spacing: -0.7px;
+    text-align: center;
+}
+
+.subtitle p{
+    margin: 0;
+}
+
+.subline{
+    width: 100%;
+    margin: 0;
+    font-size: 35px;
+    letter-spacing: -0.7px;
+    text-align: center;
+}
+
+.head{
+    margin: auto;
+    margin-bottom: 0.85em;
+    width: 70px;
+}
+
+.head img{
+    width: 100%;
+}
+
+.iphone{
+    width: 300px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    display: block;
+    transition: all 0.5s;
+}
+
+.iphone-image{
+    margin: auto;
+    height: 600px;
+    width: 300px;
+    z-index: 1000;
+    transition: all 0.5s;
+}
+
+.screen{
+    width: 248.893805px;
+    margin-top: 35px;
+    position: relative;
+    top:-591.3px;
+    left: 25.55px;
+    transition: all 0.5s;
+}
+
+.siri-panel, .hey-siri{
+    padding-top: 130px;
+    padding-bottom: 85px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hey-siri{
+    background-color: #F9F9F9;
+}
+
+.iphone-text{
+    margin-bottom: 2.05em;
+    margin-top: 185px;
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 1.33349;
+    text-align: left;
+    width: 350px;
+    z-index: 1000;
+}
+
+.demo{
+    position: absolute;
+    width: 100%;
+    transition: all 0.8s;
+}
+
+.left-arrow, .right-arrow{
+    position: absolute;
+    width: 35px;
+    top: 300px;
+    z-index: 100;
+    cursor: pointer;
+    transition:all 0.2s;
+}
+
+.left-arrow{
+    left: 2%;
+}
+
+.right-arrow{
+    right: 2%;
+}
+
+.feedback{
+    background-color: #3B3B3B;
+    color: #F9F9F9;
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+.feedback h1{
+    margin-bottom: 15px;
+}
+
+.feedback a{
+    color: #F9F9F9;
+    margin: 0;
+}
+
+.legal a{
+    margin: 0;
+}
+
+.carousel{
+    height: 650px;
+}
+
+@media screen and (max-width: 992px){
+    .carousel{
+        height: 850px;
+    }
+
+    .iphone, .iphone-image{
+        width: 250px;
+    }
+
+    .iphone-image{
+        height: 500px;
+    }
+
+    .left-arrow, .right-arrow{
+        width: 28px;
+        top: 450px;
+    }
+
+    .iphone-text{
+        margin:auto;
+        margin-top: 45px;
+        width: 500px;
+    }
+
+    .screen{
+        width: 207.411504px;
+        margin-top: 35px;
+        top:-504.4px;
+        left: 21.3px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .iphone-image{
+        margin-left: 32%;
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+
+/* Medium devices (desktops, 992px and up) */
+
+/* Large devices (large desktops, 1200px and up) */
+
+@media screen and (min-width: 1100px){
+    .iphone-image{
+        margin-left: 40%;
+    }
+}
+
+@media screen and (min-width: 1245px){
+    .iphone-image{
+        margin-left: 46%;
+    }
+}
+
+@media screen and (max-width: 1015px){
+    .headline, .overview-headline{
+        font-size: 64px;
+        font-weight: 200;
+        letter-spacing: -0.02em;
+        line-height: 1.0625;
+        margin-bottom: 0.12em;
+    }
+
+    .subhead{
+        font-size: 40px;
+        font-weight: 300;
+        letter-spacing: -0.008em;
+        line-height: 1.1;
+    }
+
+    .text{
+        margin-bottom: 1.75em;
+        width: 578px;
+    }
+}
+
+@media screen and (max-width: 740px){
+    .headline{
+        font-size: 52px;
+        letter-spacing: -0.016em;
+        line-height: 1.07724;
+        margin-bottom: 0.25em;
+        font-size: 52px;
+    }
+
+    .eyebrow{
+        font-size: 20px;
+    }
+
+    .overview-headline{
+        font-size: 32px;
+        margin-bottom: 0.7em;
+    }
+
+    .eyebrow, .overview-headline, .text{
+        text-align: left;
+        width: 95%;
+    }
+
+    .subhead{
+        font-size: 32px;
+        letter-spacing: 0;
+        line-height: 1.125;
+        font-size: 40px;
+    }
+
+    .text{
+        margin-bottom: 1.75em;
+        font-size: 20px;
+    }
+
+    .iphone-text{
+        font-size: 20px;
+        width: 95%;
+        margin: auto;
+        margin-top:25px;
+        margin-bottom: 3.1em;
+    }
+
+    .carousel{
+        height: 850px;
+    }
+
+    .iphone, .iphone-image{
+        width: 200px;
+        margin: 4px;
+    }
+
+    .iphone-image{
+        height: 400px;
+    }
+
+    .left-arrow, .right-arrow{
+        display: none;
+    }
+
+    .screen{
+        width: 165.929203px;
+        margin-top: 35px;
+        top:-387.7px;
+        left: 22px;
+    }
+
+    .carousel{
+        height: auto;
+    }
+
+    .siri-panel, .hey-siri{
+        padding-bottom: 45px;
+    }
+
+    .demo{
+        position: static;
+        display: block !important;
+    }
+
+    .demo .col-md-6{
+        padding: 0;
+    }
+}
+
+.semibold{
+    font-family: "Myriad SemiBold";
+}
+
+.legal{
+    padding-top: 45px;
+    padding-bottom: 20px;
+    background-color: #E8E8E8;
+}
+
+.legal .text{
+    font-size: 13px;
+    color: #8F8F8F;
+}
