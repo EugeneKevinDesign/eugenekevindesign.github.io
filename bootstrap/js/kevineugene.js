@@ -86,6 +86,12 @@ function arrow(event){
         leftArrow=$(".hey-siri .left-arrow");
         rightArrow=$(".hey-siri .right-arrow");
     }
+     else if($(event.target).attr("id")=="single-sign-on-arrow") {
+        firstPanel=$(".single-sign-on .first");
+        lastPanel=$(".single-sign-on .last");
+        leftArrow=$(".single-sign-on .left-arrow");
+        rightArrow=$(".single-sign-on .right-arrow");
+    }
     if(firstPanel.attr('id')!=="demo0" && lastPanel.attr('id')!=="demo0"){
         leftArrow.css("display","block");
         rightArrow.css("display","block");
@@ -107,6 +113,9 @@ function shiftToRight(event){
     else if($(event.target).attr("id")=="hey-siri-arrow") {
         panels=$(".hey-siri .demo");
     }
+    else if($(event.target).attr("id")=="single-sign-on-arrow") {
+        panels=$(".single-sign-on .demo");
+    }
     panels.each(function(){
         id = +$(this).attr("id").match(/-*[\d]+$/)+1;
         if(id>1 || id<-1){
@@ -127,6 +136,9 @@ function shiftToLeft(event){
     }
     else if($(event.target).attr("id")=="hey-siri-arrow") {
         panels=$(".hey-siri .demo");
+    }
+    else if($(event.target).attr("id")=="single-sign-on-arrow") {
+        panels=$(".single-sign-on .demo");
     }
     panels.each(function(){
         id = +$(this).attr("id").match(/-*[\d]+$/)-1;
