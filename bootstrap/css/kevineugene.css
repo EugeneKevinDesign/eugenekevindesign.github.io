@@ -264,14 +264,14 @@ a:focus{
     transition: all 0.5s;
 }
 
-.siri-panel, .hey-siri, .single-sign-on{
+.siri-panel, .hey-siri, .single-sign-on, .messages{
     padding-top: 130px;
     padding-bottom: 85px;
     position: relative;
     overflow: hidden;
 }
 
-.hey-siri{
+.hey-siri, .messages{
     background-color: #F9F9F9;
 }
 
