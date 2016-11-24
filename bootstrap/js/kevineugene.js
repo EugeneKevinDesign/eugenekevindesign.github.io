@@ -98,6 +98,12 @@ function arrow(event){
         leftArrow=$(".messages .left-arrow");
         rightArrow=$(".messages .right-arrow");
     }
+    else if($(event.target).attr("id")=="contacts-arrow") {
+        firstPanel=$(".contacts .first");
+        lastPanel=$(".contacts .last");
+        leftArrow=$(".contacts .left-arrow");
+        rightArrow=$(".contacts .right-arrow");
+    }
     if(firstPanel.attr('id')!=="demo0" && lastPanel.attr('id')!=="demo0"){
         leftArrow.css("display","block");
         rightArrow.css("display","block");
@@ -125,6 +131,9 @@ function shiftToRight(event){
     else if($(event.target).attr("id")=="messages-arrow") {
         panels=$(".messages .demo");
     }
+    else if($(event.target).attr("id")=="contacts-arrow") {
+        panels=$(".contacts .demo");
+    }
     panels.each(function(){
         id = +$(this).attr("id").match(/-*[\d]+$/)+1;
         if(id>1 || id<-1){
@@ -151,6 +160,9 @@ function shiftToLeft(event){
     }
     else if($(event.target).attr("id")=="messages-arrow") {
         panels=$(".messages .demo");
+    }
+    else if($(event.target).attr("id")=="contacts-arrow") {
+        panels=$(".contacts .demo");
     }
     panels.each(function(){
         id = +$(this).attr("id").match(/-*[\d]+$/)-1;
