@@ -144,6 +144,16 @@ a:focus{
     background: linear-gradient(#FB8690, #F8E094);
 }
 
+.mac-presentation{
+    color: white;
+    width: 100%;
+    height: auto;
+    padding-bottom: 100px;
+    padding-top: 134.5667px;
+    background-image: url(../../Newton.jpg);
+    background-size: 100% 170%;
+}
+
 .coming{
     width: 164px;
     height: 35px;
